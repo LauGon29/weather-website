@@ -6,7 +6,7 @@ const messageOne = document.getElementById('messageOne');
 const messageTwo = document.getElementById('messageTwo');
 
 const getForecastData = (locationName) => {
-    return fetch(`http://localhost:3000/weather?address=${locationName}`).then((res) => {
+    return fetch(`/weather?address=${locationName}`).then((res) => {
         res.json().then((data) => {
             const { error, location, forecastData } = data;
 
