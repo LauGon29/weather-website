@@ -10,7 +10,8 @@ const forecast = (latitude, longitude, callback) => {
             callback(body.error.info, undefined);
         } else {
             const data = body.current;
-            callback(undefined, `It is currently ${data.temperature} degress out. It feels like ${data.feelslike} degress out.`);
+            console.log(data);
+            callback(undefined, `It is currently ${data.temperature} degress out. It feels like ${data.feelslike} degress out. Wind direction: ${data.wind_dir}`);
         }
     });
 };
